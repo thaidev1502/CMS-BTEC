@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Btec Cms</title>
+    <link rel="stylesheet" href="assets/css/upcoming-events.css" />
+    <link rel="stylesheet" href="assets/css/calendar.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fonts/fontawesome-free-5.15.4-web/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Nunito"
+    />
+  </head>
+  <body>
+    <div id="containers">
+      <div id="top">
+        <div class="header-logo">
+          <img class="img-logo" src="assets/images/logo.png" alt="" />
+        </div>
+        <div class="header-user">
+          <div class="notifi">
+            <i class="far fa-bell header-icon"></i><span class="badge">3</span>
+          </div>
+          <div class="drop-user">
+            <button onclick="dropdownFunc()" class="btn-drop-user">
+              <img class="img-user btn-user-element" src="assets/images/user-img.jpg" alt="" />
+              <span class="btn-user-element">Username</span>
+              <i class="fas fa-chevron-down btn-user-element"></i>
+            </button>
+            <div id="drop" class="header-sub-nav">
+              <a href=""
+                ><i class="fas fa-user-cog"></i> <span>Settings</span>
+              </a>
+              <a href=""
+                ><i class="fas fa-sign-out-alt"></i> <span>Log out</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Start Navigation -->
+      <div id="navigation">
+        <ul id="nav">
+          <li><a href="">Home</a></li>
+          <li><a href="">My Classes</a></li>
+          <li><a href="">My Events</a></li>
+        </ul>
+        <div class="containers-4">
+          <form class="navbar-form" action="">
+            <input
+              type="search"
+              placeholder="Search..."
+              name="search"
+              id="search"
+            />
+            <button type="submit" class="icon">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- End Navigation -->
+      <div id="content">
+        <div id="breadcrumbs">
+          <ul class="breadcrumb">
+            <li><a href="">Home</a></li>
+            <li><a href="">My Classes</a></li>
+            <li>Class 1</li>
+          </ul>
+        </div>
+        <div id="main-content">
+          <div class="right-content">
+            <div class="nav-tab">
+              <button
+                class="btn tablink first-tab"
+                onclick="openTab(event,'Class-Overview')"
+              >
+                Class Overview
+              </button>
+              <button
+                class="btn tablink"
+                onclick="openTab(event, 'Create-Code')"
+              >
+                Create Code
+              </button>
+              <button
+                class="btn tablink"
+                onclick="openTab(event, 'Create-Assignment')"
+              >
+                Create Assignment
+              </button>
+            </div>
+            <div id="Class-Overview" class="tab-content class-overview">
+              <div class="topic">
+                <h1 class="topic-title">Topic 1</h1>
+                <div class="topic-content">
+                  <ul>
+                    <li>
+                      <a href=""><i class="fas fa-file-alt"></i> Asm 1</a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fas fa-file-alt"></i> Asm 1 2nd</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="topic">
+                <h1 class="topic-title">Topic 2</h1>
+                <div class="topic-content">
+                  <ul>
+                    <li>
+                      <a href=""><i class="fas fa-file-alt"></i> Asm 2</a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fas fa-file-alt"></i> Asm 2 2nd</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="topic">
+                <h1 class="topic-title">Topic 3</h1>
+                <div class="topic-content">
+                  <ul>
+                    <li>
+                      <a href=""><i class="fas fa-file-alt"></i> Asm 3</a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fas fa-file-alt"></i> Asm 3 2nd</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="Create-Code" class="tab-content" style="display: none">
+              <form action="">
+                <h4>Code for Class</h4>
+                <input
+                  type="password"
+                  id="codeInput"
+                  placeholder=""
+                  class="input-info"
+                  required
+                /><br />
+                <input type="checkbox" name="" id="" onclick="showpassFunc()" />
+                Show Password
+              </form>
+              <button type="submit" class="btn btn-create-code">Update</button>
+            </div>
+            <div
+              id="Create-Assignment"
+              class="tab-content"
+              style="display: none"
+            >
+              <form action="">
+                <h4>Assignment Name</h4>
+                <input
+                  type="text"
+                  placeholder="Name..."
+                  required
+                  class="input-info"
+                /><br />
+                <h4>Due</h4>
+                <input
+                  type="date"
+                  class="input-info"
+                  required
+                  placeholder=""
+                /><br />
+                <h4>Submitsion Type</h4>
+                <select name="submitsion-type" id="" class="input-info">
+                  <option value=".doc">.doc</option>
+                  <option value=".pdf">.pdf</option>
+                  <option value=".zip">.zip</option>
+                </select>
+              </form>
+              <button type="submit" class="btn btn-create-asm">
+                Create Assignment
+              </button>
+            </div>
+          </div>
+          <div id="sidebar">
+            <div id="calendar">
+              <div class="calendar-title">
+                <i class="fas fa-calendar-alt"></i><span>Calendar</span>
+              </div>
+              <div class="wrapper">
+                <div id="calendari"></div>
+              </div>
+            </div>
+            <div class="events">
+              <div class="events-title">
+                <i class="fas fa-calendar-check"></i
+                ><span>Upcoming Events</span>
+              </div>
+              <div>
+                <div class="cal" ng-app="calApp" ng-controller="calCtrl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footer-info">
+          <div class="heading">Footer info 1</div>
+        </div>
+        <div class="footer-info">Footer info 2</div>
+        <div class="footer-info">Footer info 3</div>
+        <div class="footer-info">Footer info 4</div>
+      </div>
+    </div>
+    <div></div>
+    <!-- Calendar JS -->
+    <script language="javascript" src="assets/js/calendar.js"></script>
+    <!-- ShowPass JS -->
+    <script>
+      function showpassFunc() {
+        var x = document.getElementById("codeInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+    <!-- Tablink js -->
+    <script>
+      function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab-content");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " first-tab",
+            ""
+          );
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " first-tab";
+      }
+    </script>
+    <!-- Fixed Navigation -->
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById("navigation");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+    <script src="assets/js/drop-user.js"></script>
+  </body>
+</html>
